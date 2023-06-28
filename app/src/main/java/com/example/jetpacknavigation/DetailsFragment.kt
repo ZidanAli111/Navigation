@@ -20,6 +20,12 @@ class DetailsFragment : Fragment() {
         val binding: FragmentDetailsBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_details, container, false)
 
+        var args = DetailsFragmentArgs.fromBundle(requireArguments())
+
+        binding.animeName.text = args.name
+        binding.description.text = args.description
+        binding.rating.text= args.rating.toString()
+
         binding.finishBtn.setOnClickListener { view: View ->
             val rating = Integer.parseInt(binding.rating.text.toString());
             if (rating < 4) {

@@ -30,10 +30,23 @@
         tools:layout="@layout/fragment_details" >
         <action
             android:id="@+id/action_detailsFragment_to_successFragment"
-            app:destination="@id/successFragment" />
+            app:destination="@id/successFragment"
+            app:popUpTo="@id/addFragment"
+            app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_detailsFragment_to_retryFragment"
-            app:destination="@id/retryFragment" />
+            app:destination="@id/retryFragment"
+            app:popUpTo="@id/detailsFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="description"
+            app:argType="string" />
+        <argument
+            android:name="rating"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/successFragment"
@@ -42,7 +55,8 @@
         tools:layout="@layout/fragment_success" >
         <action
             android:id="@+id/action_successFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/retryFragment"
@@ -51,6 +65,7 @@
         tools:layout="@layout/fragment_retry" >
         <action
             android:id="@+id/action_retryFragment_to_addFragment"
-            app:destination="@id/addFragment" />
+            app:destination="@id/addFragment"
+            app:popUpTo="@id/addFragment" />
     </fragment>
 </navigation>

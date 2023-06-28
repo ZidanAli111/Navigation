@@ -20,8 +20,12 @@ class AddFragment : Fragment() {
             DataBindingUtil.inflate(inflater, R.layout.fragment_add, container, false)
 
         binding.submitBtn.setOnClickListener { view: View ->
+
+            val name =binding.nameEditText.text.toString()
+            val description=binding.descriptionEditText.text.toString()
+            val rating = Integer.parseInt(binding.ratingEditText.text.toString());
             view.findNavController()
-                .navigate(AddFragmentDirections.actionAddFragmentToDetailsFragment())
+                .navigate(AddFragmentDirections.actionAddFragmentToDetailsFragment(name,description,rating))
         }
         return binding.root
     }
