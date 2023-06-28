@@ -2,60 +2,63 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".AddFragment">
+    tools:context=".DetailsFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="@+id/descriptionText"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionText">
 
         <TextView
-            android:id="@+id/name"
+            android:id="@+id/animeDetailText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="160dp"
-            android:text="@string/enter_the_anime_details"
-            android:textColor="#2196F3"
+            android:layout_marginTop="116dp"
+            android:text="ANIME  DETAILS"
+            android:textColor="#03A9F4"
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.428"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+
         <View
             android:id="@+id/view"
-            android:layout_width="378dp"
+            android:layout_width="222dp"
             android:layout_height="2dp"
             android:layout_marginTop="8dp"
             android:background="#009688"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.363"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/name" />
+            app:layout_constraintEnd_toEndOf="@+id/animeDetailText"
+            app:layout_constraintStart_toStartOf="@+id/animeDetailText"
+            app:layout_constraintTop_toBottomOf="@+id/animeDetailText" />
+
 
         <TextView
             android:id="@+id/animeNameText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="68dp"
+            android:layout_marginTop="44dp"
             android:text="@string/name"
             android:textSize="20sp"
             android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/view"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/name" />
+            app:layout_constraintTop_toBottomOf="@+id/view" />
 
-        <EditText
-            android:id="@+id/nameEditText"
+        <TextView
+            android:id="@+id/animeName"
             android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:layout_marginTop="56dp"
-            android:hint="@string/enter_the_anime_name"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.751"
+            app:layout_constraintHorizontal_bias="0.318"
             app:layout_constraintStart_toEndOf="@+id/animeNameText"
-            app:layout_constraintTop_toBottomOf="@+id/name" />
-
+            app:layout_constraintTop_toBottomOf="@+id/view"
+            tools:text="Naruto" />
 
         <TextView
             android:id="@+id/descriptionText"
@@ -69,17 +72,19 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/animeNameText" />
 
-        <EditText
-            android:id="@+id/descriptionEditText"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:layout_marginTop="40dp"
-            android:hint="@string/enter_the_description"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.378"
-            app:layout_constraintStart_toEndOf="@+id/descriptionText"
-            app:layout_constraintTop_toBottomOf="@+id/nameEditText" />
 
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="68dp"
+            android:layout_marginEnd="4dp"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.203"
+            app:layout_constraintStart_toEndOf="@+id/descriptionText"
+            app:layout_constraintTop_toBottomOf="@+id/animeName"
+            tools:text=" Story of  Shinobi World" />
 
         <TextView
             android:id="@+id/ratingText"
@@ -93,29 +98,32 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/descriptionText" />
 
-        <EditText
-            android:id="@+id/ratingEditText"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:layout_marginTop="32dp"
-            android:hint="@string/enter_the_total_rating"
-            android:inputType="number"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.621"
-            app:layout_constraintStart_toEndOf="@+id/ratingText"
-            app:layout_constraintTop_toBottomOf="@+id/descriptionEditText" />
 
-        <Button
+        <TextView
+            android:id="@+id/rating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/submit"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="212dp"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.985"
+            app:layout_constraintStart_toEndOf="@+id/ratingText"
+            app:layout_constraintTop_toBottomOf="@+id/description"
+            tools:text="10" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2196F3"
+            android:text="FINISH"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ratingText" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
