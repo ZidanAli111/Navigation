@@ -11,4 +11,6 @@
     <string name="rating">RATING:</string>
     <string name="enter_the_total_rating">Enter the total rating</string>
     <string name="submit">SUBMIT</string>
+    <string name="thank_you">THANK YOU</string>
+    <string name="home">HOME</string>
 </resources>
