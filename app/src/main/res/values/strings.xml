@@ -13,4 +13,6 @@
     <string name="submit">SUBMIT</string>
     <string name="thank_you">THANK YOU</string>
     <string name="home">HOME</string>
+    <string name="retry">RETRY</string>
+    <string name="want_to_add_more">Want to Add More?</string>
 </resources>
