@@ -12,7 +12,8 @@
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_homeFragment_to_addFragment"
-            app:destination="@id/addFragment" />
+            app:destination="@id/addFragment"
+            app:popUpTo="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/addFragment"
@@ -21,7 +22,8 @@
         tools:layout="@layout/fragment_add" >
         <action
             android:id="@+id/action_addFragment_to_detailsFragment"
-            app:destination="@id/detailsFragment" />
+            app:destination="@id/detailsFragment"
+            app:popUpTo="@id/addFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailsFragment"
@@ -57,6 +59,15 @@
             android:id="@+id/action_successFragment_to_homeFragment"
             app:destination="@id/homeFragment"
             app:popUpTo="@id/homeFragment" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="description"
+            app:argType="string" />
+        <argument
+            android:name="rating"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/retryFragment"

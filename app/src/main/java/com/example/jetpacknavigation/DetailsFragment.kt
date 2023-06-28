@@ -24,16 +24,20 @@ class DetailsFragment : Fragment() {
 
         binding.animeName.text = args.name
         binding.description.text = args.description
-        binding.rating.text= args.rating.toString()
+        binding.rating.text = args.rating.toString()
+
 
         binding.finishBtn.setOnClickListener { view: View ->
+            val name=binding.animeName.text.toString()
+            val description=binding.description.text.toString()
             val rating = Integer.parseInt(binding.rating.text.toString());
-            if (rating < 4) {
+
+            if (rating <= 4) {
                 view.findNavController()
                     .navigate(DetailsFragmentDirections.actionDetailsFragmentToRetryFragment())
             } else {
                 view.findNavController()
-                    .navigate(DetailsFragmentDirections.actionDetailsFragmentToSuccessFragment())
+                    .navigate(DetailsFragmentDirections.actionDetailsFragmentToSuccessFragment(name,description,rating))
             }
         }
 
