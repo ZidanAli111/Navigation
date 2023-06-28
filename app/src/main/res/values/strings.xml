@@ -3,4 +3,12 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="welcome_to_anime">Welcome To Anime</string>
+    <string name="enter_the_anime_details">ENTER THE ANIME DETAILS</string>
+    <string name="name">NAME:</string>
+    <string name="enter_the_anime_name">Enter the anime name.</string>
+    <string name="description">DESCRIPTION:</string>
+    <string name="enter_the_description">Enter the Description.</string>
+    <string name="rating">RATING:</string>
+    <string name="enter_the_total_rating">Enter the total rating</string>
+    <string name="submit">SUBMIT</string>
 </resources>
