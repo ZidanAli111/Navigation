@@ -19,4 +19,7 @@
     <string name="share_success_text">Here all the anime details are available</string>
     <string name="about">About</string>
     <string name="about_description">This app is about demonstrating the Android Jetpack Navigation ,where we are developing a anime theme app where the user can enter the detail of their anime and provide the rating.</string>
+    <string name="developer_description">Hi, I am currently working on android and web projects. I really love to join your team as a developer so that I can contribute to the Project.</string>
+    <string name="developer_name">Zidan Ali</string>
+    <string name="developer">Developer</string>
 </resources>
