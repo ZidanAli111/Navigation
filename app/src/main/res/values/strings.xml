@@ -17,4 +17,6 @@
     <string name="want_to_add_more">Want to Add More?</string>
     <string name="share">Share</string>
     <string name="share_success_text">Here all the anime details are available</string>
+    <string name="about">About</string>
+    <string name="about_description">This app is about demonstrating the Android Jetpack Navigation ,where we are developing a anime theme app where the user can enter the detail of their anime and provide the rating.</string>
 </resources>
