@@ -13,6 +13,10 @@
         <action
             android:id="@+id/action_homeFragment_to_addFragment"
             app:destination="@id/addFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
             app:popUpTo="@id/homeFragment" />
     </fragment>
     <fragment
@@ -23,6 +27,10 @@
         <action
             android:id="@+id/action_addFragment_to_detailsFragment"
             app:destination="@id/detailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
             app:popUpTo="@id/addFragment" />
     </fragment>
     <fragment
@@ -33,11 +41,19 @@
         <action
             android:id="@+id/action_detailsFragment_to_successFragment"
             app:destination="@id/successFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
             app:popUpTo="@id/addFragment"
             app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_detailsFragment_to_retryFragment"
             app:destination="@id/retryFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
             app:popUpTo="@id/detailsFragment"
             app:popUpToInclusive="true" />
         <argument
@@ -58,6 +74,10 @@
         <action
             android:id="@+id/action_successFragment_to_homeFragment"
             app:destination="@id/homeFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
             app:popUpTo="@id/homeFragment" />
         <argument
             android:name="name"
@@ -77,6 +97,10 @@
         <action
             android:id="@+id/action_retryFragment_to_addFragment"
             app:destination="@id/addFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
             app:popUpTo="@id/addFragment" />
     </fragment>
     <fragment
